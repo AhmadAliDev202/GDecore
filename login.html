@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GDecor - Login</title>
+    <meta name="description" content="Home Plant Decor offers beautiful indoor plants, care tips, and decor ideas to bring greenery and calm to your space. Shop our curated collection today." />
+    <meta name="keywords" content="indoor plants, plant decor, home plants, plant care, buy plants online, greenery" />
+    <meta name="author" content="Plant Decor Team" />
+    <meta property="og:title" content="GDecor - Login" />
+    <meta property="og:description" content="Login to GDecor to manage your indoor plant decor orders and preferences." />
+    <meta property="og:type" content="website" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --olive: #4f4f2f;
+            --beige: #ede8d0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--beige);
+            color: var(--olive);
+        }
+
+        .hero-background {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: url('Images/HeroImgDecor.png') center/cover no-repeat;
+            filter: blur(8px);
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .auth-form {
+            background-color: rgba(237, 232, 208, 0.95);
+            border: 2px solid var(--olive);
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .auth-form h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--olive);
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(79, 79, 47, 0.3);
+        }
+
+        .auth-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--olive);
+            color: var(--beige);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .auth-btn:hover {
+            background-color: #3b3b1f;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .form-footer a {
+            color: var(--olive);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-background" aria-hidden="true"></div>
+
+    <div class="auth-container">
+        <form class="auth-form" id="login-form">
+            <h2>Welcome Back!</h2>
+
+            <div class="form-group">
+                <label for="login-email">Email Address</label>
+                <input type="email" id="login-email" placeholder="Enter your email" required />
+            </div>
+
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" placeholder="Enter your password" required />
+            </div>
+
+            <button type="submit" class="auth-btn">Log In</button>
+
+            <div class="form-footer">
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                <p><a href="#">Forgot password?</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value.trim();
+            const password = document.getElementById('login-password').value.trim();
+
+            if (email && password) {
+                alert(`Logged in as: ${email}`);
+            } else {
+                alert('Please fill in both fields.');
+            }
+        });
+    </script>
+</body>
+</html>
+

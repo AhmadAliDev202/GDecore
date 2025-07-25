@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDecor - Home</title>
+    <meta name="description" content="Home Plant Decor offers beautiful indoor plants, care tips, and decor ideas to bring greenery and calm to your space. Shop our curated collection today.">
+    <meta name="keywords" content="indoor plants, plant decor, home plants, plant care, buy plants online, greenery">
+    <meta name="author" content="Plant Decor Team">
+    <meta property="og:title" content="Home Plant Decor - Indoor Plants & Green Living">
+    <meta property="og:description" content="Shop beautiful indoor plants and discover plant care tips to bring greenery into your home.">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   <section id="welcome" class="hero">
+<header>
+  <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+  <nav class="nav-left desktop-nav">
+    <a href="Index.html">HOME</a>
+    <a href="#plant-care">PLANTS CARE</a>
+    <a href="#connect">CONNECT</a>
+  </nav>
+
+  <div class="logo">GDecor</div>
+
+  <nav class="nav-right desktop-nav">
+    <a href="#shop-plants">SHOP PLANTS</a>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search..." />
+      <a id="search-toggle" class="search-icon" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50" fill="currentColor">
+          <path d="M 21 3 C 11.623 3 4 10.623 4 20 C 4 29.377 11.623 37 21 37 C 24.712 37 28.139 35.791 30.938 33.766 L 44.086 46.914 L 46.914 44.086 L 33.887 31.059 C 36.444 28.083 38 24.224 38 20 C 38 10.623 30.377 3 21 3 z M 21 5 C 29.296 5 36 11.704 36 20 C 36 28.296 29.296 35 21 35 C 12.704 35 6 28.296 6 20 C 6 11.704 12.704 5 21 5 z"></path>
+        </svg>
+      </a>
+    </div>
+
+    <a href="Cart.html" class="search-icon" aria-label="View Cart">
+      <img src="Images/icons8-cart-50.png" alt="Cart Icon">
+    </a>
+
+    <a href="login.html" class="search-icon" aria-label="Login / Sign Up">
+      <img src="Images/icons8-user-50.png" alt="User Icon">
+    </a>
+  </nav>
+
+ <div id="sidebar">
+  <div class="sidebar-content">
+    <input type="text" placeholder="Search..." class="sidebar-search">
+    <a href="Index.html">HOME</a>
+    <a href="#plant-care">PLANTS CARE</a>
+    <a href="#connect">CONNECT</a>
+    <a href="#shop-plants">SHOP PLANTS</a>
+    <div class="sidebar-bottom-icons">
+      <a href="Cart.html"><img src="Images/icons8-cart-50.png" alt="Cart"></a>
+      <a href="login.html"><img src="Images/icons8-user-50.png" alt="User"></a>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
+
+
+  <h1>Welcome to Plant Decor</h1>
+  <p>Bringing Green Calm to Your Home</p>
+  <button id="view-collection">View Collection</button>
+  </section>
+
+
+  <!-- Plant Cards -->
+<div id="toast" class="toast"></div>
+ <section id="shop-plants" class="shop-plants">
+  <h2 style="font-size:32px; font-weight:600;">Shop Plants</h2>
+
+  <div class="filters-container">
+    <div class="filter-sidebar">
+      <div class="filter-group">
+        <button id="toggle-category-filter" class="filter-toggle">Filter by Category ⬇</button>
+        <div class="filter-menu" id="category-filter-menu">
+          <button class="category-btn" data-category="Warm">Warm</button>
+          <button class="category-btn" data-category="Cold">Cold</button>
+          <button class="category-btn" data-category="Off Season">Off Season</button>
+          <button class="category-btn" data-category="All">All</button>
+        </div>
+        
+      </div>
+
+      <div class="filter-group">
+        <button id="toggle-price-filter" class="filter-toggle">Filter by Price ⬇</button>
+        
+        <div class="filter-menu" id="price-filter-menu">
+          <button class="price-btn" data-sort="high">High → Low</button>
+          <button class="price-btn" data-sort="low">Low → High</button>
+        </div>
+      </div>
+    </div>
+<div class="active-filters" id="active-filters">
+      <!-- Active filters will be displayed here -->
+      <span>No filters applied.</span>
+    </div>
+
+  </div>
+
+  <div class="plant-categories" id="plant-cards-container">
+    <!-- Cards will be injected dynamically -->
+  </div>
+</section>
+
+
+<section id="plant-care" class="care-section">
+    <div class="guide-container">
+    <div class="guide-text">
+      <h2 class="guide-title" style="font-size:32px;">Plant Care Guide</h2>
+      <p class="guide-subtitle">Everything you need to know to keep your plants thriving</p>
+    </div>
+
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>Watering Basics <span class="level-tag beginner">Beginner</span></h3>
+        <ul>
+          <li>Check soil moisture before watering</li>
+          <li>Water early morning or evening</li>
+          <li>Use room temperature water</li>
+          <li>Ensure proper drainage</li>
+        </ul>
+      </div>
+      <div class="guide-card">
+        <h3>Light Requirements <span class="level-tag beginner">Beginner</span></h3>
+        <ul>
+          <li>Match light to plant needs</li>
+          <li>Rotate plants weekly</li>
+          <li>Watch for signs of light stress</li>
+          <li>Consider grow lights in winter</li>
+        </ul>
+      </div>
+      <div class="guide-card">
+        <h3>Temperature Control <span class="level-tag intermediate">Intermediate</span></h3>
+        <ul>
+          <li>Maintain consistent temperatures</li>
+          <li>Avoid cold drafts</li>
+        </ul>
+      </div>
+      <div class="guide-card">
+        <h3>Maintenance <span class="level-tag intermediate">Intermediate</span></h3>
+        <ul>
+          <li>Remove dead or yellowing leaves</li>
+          <li>Pinch growing tips to encourage bushiness</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="font-size:24px;font-weight:600; text-align: left;margin-top: 50px; padding:0; ">Common Plant Problems</h2>
+  <div class="problems-grid">
+    <div class="problem-card">
+      <h3 class="problem-title">Drooping Plants</h3>
+      <h4>Common Causes</h4>
+      <ul>
+        <li>Underwatering or overwatering</li>
+        <li>Sudden temperature changes</li>
+        <li>Poor drainage in pots</li>
+      </ul>
+      <h4>Solutions</h4>
+      <ul>
+        <li>Check soil moisture regularly</li>
+        <li>Use pots with drainage holes</li>
+        <li>Adjust watering based on season</li>
+      </ul>
+    </div>
+    <div class="problem-card">
+      <h3 class="problem-title">Yellow Leaves</h3>
+      <h4>Common Causes</h4>
+      <ul>
+        <li>Overwatering</li>
+        <li>Nutrient deficiencies</li>
+        <li>Low light conditions</li>
+      </ul>
+      <h4>Solutions</h4>
+      <ul>
+        <li>Reduce watering frequency</li>
+        <li>Use balanced fertilizer</li>
+        <li>Move to a brighter location</li>
+      </ul>
+    </div>
+    <div class="problem-card">
+      <h3 class="problem-title">Brown Leaf Tips</h3>
+      <h4>Common Causes</h4>
+      <ul>
+        <li>Low humidity</li>
+        <li>Salt build-up in soil</li>
+        <li>Underwatering</li>
+      </ul>
+      <h4>Solutions</h4>
+      <ul>
+        <li>Mist plants regularly</li>
+        <li>Flush soil monthly with water</li>
+        <li>Ensure consistent watering</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="care-section">
+  <h2>Seasonal Care Calendar</h2>
+  <div class="care-card">
+    <div>
+      <h3>Spring</h3>
+      <ul>
+        <li>Increase watering frequency</li>
+        <li>Start fertilizing</li>
+        <li>Repot if needed</li>
+        <li>Move plants to brighter spots</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Summer</h3>
+      <ul>
+        <li>Water more frequently</li>
+        <li>Provide shade from intense sun</li>
+        <li>Increase humidity</li>
+        <li>Prune actively growing plants</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Fall</h3>
+      <ul>
+        <li>Reduce watering</li>
+        <li>Stop fertilizing</li>
+        <li>Move plants indoors</li>
+        <li>Check for pests</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Winter</h3>
+      <ul>
+        <li>Water sparingly</li>
+        <li>Provide extra humidity</li>
+        <li>Use grow lights if needed</li>
+        <li>Avoid cold drafts</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-container">
+
+
+    <div class="footer-section story">
+      <h3>Our Story</h3>
+      <p>“We believe in spreading greenery. Rooted in sustainability and style, we make every home greener and calmer. Each plant brings freshness and peace, making plant care joyful."</p>
+      <h4>Our vision</h4>
+      <p class="vision"> Spreading greenery everywhere.</p>
+    </div>
+
+
+    <div class="footer-section links">
+      <h3>Explore</h3>
+      <a href="#blog">Blog</a>
+      <a href="#summer-collection">Summer Collection</a>
+      <a href="#winter-collection">Winter Collection</a>
+      <a href="#cozy-theme">Cozy Theme</a>
+      <a href="#vibrant-theme">Vibrant Theme</a>
+      <a href="#our-team">Our Team</a>
+      <a href="#past-projects">Past Projects</a>
+    </div>
+
+    <div id="connect" class="footer-section connect">
+      <div class="office">
+        <h3 class="fsch1">Contact Us!</h3>  
+        <p>Lahore, Pakistan</p>
+        <p>+92 328 2244664</p>
+      </div>
+      <h3 class="fsch2">Follow Us!</h3>
+      <div class="social-icons">
+       <a href="#" aria-label="WhatsApp" class="social-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" 
+       stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle">
+    <path d="M21 11.5a8.38 8.38 0 0 1-1.9 5.4 8.5 8.5 0 0 1-6.6 3.1 8.38 8.38 0 0 1-5.4-1.9L3 21l1.9-4.1A8.38 8.38 0 0 1 3.8 11.5a8.5 8.5 0 0 1 3.1-6.6 8.38 8.38 0 0 1 5.4-1.9h.3a8.5 8.5 0 0 1 8.5 8.5z"></path>
+  </svg>
+</a>
+
+<a href="#" aria-label="Instagram" class="social-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram">
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+  </svg>
+</a>
+<a href="#" aria-label="Facebook" class="social-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
+       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+       class="lucide lucide-facebook">
+    <path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v9h4v-9h3l1-4h-4V6a1 1 0 0 1 1-1h3z"></path>
+  </svg>
+</a>
+<a href="#" aria-label="Twitter" class="social-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
+       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+       class="lucide lucide-twitter">
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66
+             10.66 0 0 1 3 4s-4 9 5 13a11.64
+             11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5
+             4.5 0 0 0-.08-.83A7.72 7.72 0 0 0
+             23 3z">
+    </path>
+  </svg>
+</a>
+</div>
+    </div>
+
+    <div class="footer-section subscribe">
+      <h3>Stay Updated</h3>
+      <form id="subscribe-form">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <p class="copyright">&copy; 2025 Ahmad Ali. All rights reserved.</p>
+</footer>
+   <script src="Js/cart.js"></script>
+   <script src="Js/shopPlants.js"></script>
+</body>
+
+</html>

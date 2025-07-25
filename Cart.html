@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDecor - Cart</title>
+    <meta name="description" content="Home Plant Decor offers beautiful indoor plants, care tips, and decor ideas to bring greenery and calm to your space. Shop our curated collection today.">
+    <meta name="keywords" content="indoor plants, plant decor, home plants, plant care, buy plants online, greenery">
+    <meta name="author" content="Plant Decor Team">
+    <meta property="og:title" content="Home Plant Decor - Indoor Plants & Green Living">
+    <meta property="og:description" content="Shop beautiful indoor plants and discover plant care tips to bring greenery into your home.">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>:root {
+  --olive: #4f4f2f;
+  --beige: #ede8d0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--beige);
+  color: var(--olive);
+}
+
+.hero-background {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/Images/HeroImgDecor.png') center/cover no-repeat;
+  filter: blur(8px);
+  z-index: -1;
+}
+.hidden {
+  display: none !important;
+}
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--olive);
+  color: var(--beige);
+  padding: 12px 18px;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(20px);
+  z-index: 1000;
+}
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.cart-container {
+  max-width: 800px;
+  margin: 80px auto;
+  background: var(--beige);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 28px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--olive);
+  padding-bottom: 10px;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h3 {
+  margin: 0;
+}
+
+.cart-item-info p {
+  margin: 5px 0;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-item-price {
+  font-weight: bold;
+}
+
+button {
+  background: var(--olive);
+  color: var(--beige);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3b3b1f;
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.empty-cart .empty-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.order-summary {
+  margin-top: 40px;
+}
+
+.order-summary .total {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.clear-cart {
+  background: none;
+  color: var(--olive);
+  text-decoration: underline;
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+  <div class="hero-background"></div>
+  
+  <div id="toast" class="toast"></div>
+  <main class="cart-container">
+    <h1>Shopping Cart</h1>
+
+    <div id="cart-items"></div>
+
+    <div id="empty-cart" class="empty-cart hidden">
+      <svg viewBox="0 0 24 24" class="empty-icon">
+        <path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2h10c1.1 0 2-.9 2-2s-.9-2-2-2H7zm0-2h10l1.6-9H5.4l1.6 9zM9 4h6v2H9V4z" fill="var(--olive)"/>
+      </svg>
+      <h2>Your Cart is Empty</h2>
+      <p>Add some beautiful plants to get started!</p>
+      <button onclick="continueShopping()">Continue Shopping</button>
+    </div>
+
+    <div id="order-summary" class="order-summary hidden">
+      <h2>Order Summary</h2>
+      <p>Subtotal: <span id="subtotal">Rs 0</span></p>
+      <p>Shipping: Free</p>
+      <p class="total">Total: <span id="total">Rs 0</span></p>
+      <button onclick="checkout()">Proceed to Checkout</button>
+      <button onclick="continueShopping()">Continue Shopping</button>
+      <button onclick="clearCart()" class="clear-cart">Clear Cart</button>
+    </div>
+  </main>
+
+  <script src="Js/cart.js"></script>
+</body>
+</html>
