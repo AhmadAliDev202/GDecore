@@ -86,7 +86,7 @@ function clearCart() {
 showToast('Proceeding to checkout...');
 
 function continueShopping() {
-  window.location.href = 'Index.html';
+  window.location.href = 'index.html';
 }
 
 
